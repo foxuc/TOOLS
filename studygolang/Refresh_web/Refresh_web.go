@@ -65,15 +65,15 @@ func sleepXs(url string,num int,sleepMillisecond int,isPrint bool) {
 	// 休眠100毫秒 	//time.Sleep(100 * time.Millisecond)
 	i:=0
 	t := time.Now()
-	sleepSecondTimeX := time.Millisecond * time.Duration(sleepMillisecond)
+	sleepMillisecondX := time.Millisecond * time.Duration(sleepMillisecond)
 	for{
 		i++
 		get(url,isPrint)
 		if i>=num{
-			p("ForNum:",num," sleepMillisecond:",sleepSecondTimeX," Use:",time.Now().Sub(t).String())
+			p("ForNum:",num," sleepMillisecond:",sleepMillisecondX," Use:",time.Now().Sub(t).String())
 			break
 		}
-		time.Sleep(sleepSecondTimeX)
+		time.Sleep(sleepMillisecondX)
 	}
 }
 
