@@ -5,7 +5,7 @@ D:\Works\FishStoreLog\src>Refresh_web.exe
 
 iniPath: D:\Works\FishStoreLog\src\config.ini
 
-          -------------- config.ini by xiaohai 2018.10.11 Ver:0.1 --------------
+          -------------- config.ini by xiaohai 2018.10.11 Ver:0.3 --------------
           
 url:  http://www.baidu.com
 
@@ -14,6 +14,8 @@ cycles:  3
 sleepMillisecond:  500
 
 isPrint:  true
+
+isPrintwebBody:  false
 
            -------------- config.ini --------------
            
