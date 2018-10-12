@@ -1,7 +1,8 @@
 # TOOLS
 # TOOLS/studygolang/Refresh_web/Refresh_web.go
 
-D:\Works\FishStoreLog\src>Refresh_web.exe
+<p>D:\Works\FishStoreLog\src>Refresh_web.exe </p>
+<pre><code>Refresh_web.exe</code></pre>
 
 iniPath: D:\Works\FishStoreLog\src\config.ini
 
@@ -32,3 +33,4 @@ isPrintwebBody:  false
 ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 
 请按任意键继续...
+
