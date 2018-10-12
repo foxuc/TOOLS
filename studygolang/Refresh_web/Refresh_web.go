@@ -12,6 +12,16 @@ import (
 	"strconv"
 )
 var p = fmt.Println
+/*init 请按任意键继续*/
+func init() {
+	if err := termbox.Init(); err != nil {
+		panic(err)
+	}
+	termbox.SetCursor(0, 0)
+	termbox.HideCursor()
+	//defer termbox.Close()
+
+}
 func main(){
 	iniPath :=filepath.Join( getCurrentDirectory(),"config.ini")
 	p("iniPath:",iniPath)
@@ -33,18 +43,19 @@ func main(){
 	isPrint1 := cfg.Section("URL").Key("isPrint").String()
 	isPrint,_ := strconv.ParseBool(isPrint1)
 
-	p("          -------------- config.ini by xiaohai 2018.10.11 Ver:0.1 --------------           ")
+	p("          -------------- config.ini by xiaohai 2018.10.12 Ver:0.2 --------------           ")
 	p("url: ", url)
 	p("cycles: ", cycles)
 	p("sleepMillisecond: ", sleepMillisecond)
 	p("isPrint: ", isPrint)
 	p("           -------------- config.ini --------------         ")
 	p("\r\n")
-	p(time.Now().Format("2006-01-02 15:04:05.000000"),"[   Get.Url开始运行中...  ]:",url)
+	p(time.Now().Format("2006-01-02 15:04:05.000000"),"[   Get.Url运行中...  ]:",url)
 	sleepXs(url,cycles,sleepMillisecond,isPrint)
 	pause()
 }
 func get(url string,isPrint bool){
+
 	response,_:=http.Get(url)
 	//defer response.Body.Close()
 	//body,_:=ioutil.ReadAll(response.Body)
@@ -62,18 +73,20 @@ if isPrint {
 // 休眠
 func sleepXs(url string,num int,sleepMillisecond int,isPrint bool) {
 	// time.Millisecond    表示1毫秒
-	// 休眠100毫秒 	//time.Sleep(100 * time.Millisecond)
+
 	i:=0
 	t := time.Now()
-	sleepMillisecondX := time.Millisecond * time.Duration(sleepMillisecond)
+	sleepSecondTimeX := time.Millisecond * time.Duration(sleepMillisecond)
 	for{
 		i++
 		get(url,isPrint)
 		if i>=num{
-			p("ForNum:",num," sleepMillisecond:",sleepMillisecondX," Use:",time.Now().Sub(t).String())
+			p("ForNum:",num," sleepMillisecond:",sleepSecondTimeX," Use:",time.Now().Sub(t).String())
 			break
 		}
-		time.Sleep(sleepMillisecondX)
+
+		// 休眠1秒
+		time.Sleep(sleepSecondTimeX)
 	}
 }
 
