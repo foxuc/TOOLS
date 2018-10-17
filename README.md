@@ -122,6 +122,7 @@ if exist "F:\BAKVM\BAK%y%%m%%d%" (
 ```
 
 # 【方法3】powershell 删除7天前的日志
+```
 把以下命令保存为ps1脚本或加到计划任务中：
 #delete logs in specify website, just save logs in eight days~   
 $TimeOutDays=7
@@ -137,6 +138,7 @@ foreach ($files in $allFiles)
      remove-item $files.fullname -Recurse -force      
     }    
 }
+```
 参数说明:
 -Recurse  表示递归，删除子文件和子文件夹
 -Force 表示强制删除，不询问
