@@ -57,6 +57,15 @@ D:\Works\>goDate.exe -
 
 Parameter Error !
 
+D:\Works\>goDate.exe -0
+
+Parameter Error !
+
+D:\Works\>goDate.exe +0
+
+Parameter Error !
+
+
 # Run goDate.exe To BAT
 ```
 echo off
