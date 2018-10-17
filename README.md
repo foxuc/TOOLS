@@ -38,18 +38,23 @@ ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 [goDate.go] (https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.go)
 
 D:\Works\>goDate.exe +10
+
 20181027
 
 D:\Works\>goDate.exe -1
+
 20181016
 
 D:\Works\>goDate.exe -14
+
 20181003
 
 D:\Works\>goDate.exe +
+
 Parameter Error !
 
 D:\Works\>goDate.exe -
+
 Parameter Error !
 
 # Run goDate.exe To BAT
@@ -77,6 +82,7 @@ pause
 D:\Works\>echo off
 
 D:\Works\>echo goDate.exe -14 "day:" 20181003
+
 goDate.exe -14 "day:" 20181003
 
 D:\Works\>if exist ".\BAK20181003" (rmdir /S /Q .\BAK20181003 )
