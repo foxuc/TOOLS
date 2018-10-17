@@ -104,8 +104,8 @@ D:\Works\>pause
 >>>
 
 
-```
 # 【方法2】Vbs 设置BAT几天前
+```
 pushd F:\BAKVM\
 set n=14
 
