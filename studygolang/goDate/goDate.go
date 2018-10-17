@@ -18,7 +18,7 @@ var p = fmt.Println
 func main() {
 	  args := os.Args
 	 lenArg :=args[1]
-	  if args == nil || len(args) !=2 || strings.EqualFold(lenArg,"-") || strings.EqualFold(lenArg,"+") {
+	 if args == nil || len(args) !=2 || strings.EqualFold(lenArg,"-") || strings.EqualFold(lenArg,"+") || strings.EqualFold(lenArg,"-0") || strings.EqualFold(lenArg,"+0") {
 		 p("Parameter Error !")
 		 return
 	  }
