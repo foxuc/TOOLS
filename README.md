@@ -35,6 +35,7 @@ ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 请按任意键继续...
 
 # goDate.exe
+[goDate.go] (https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.go)
 D:\Works\>goDate.exe +10
 20181027
 
@@ -82,7 +83,9 @@ D:\Works\>if exist ".\BAK20181003" (rmdir /S /Q .\BAK20181003 )
 D:\Works\>mkdir .\BAK20181003
 
 D:\Works\>pause
+
 请按任意键继续. . .
 >>>
 
 
+[回到顶部](#readme)
