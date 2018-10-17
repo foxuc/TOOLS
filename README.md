@@ -34,7 +34,7 @@ ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 
 请按任意键继续...
 
-# goDate.exe
+# 【方法1】goDate.exe 设置BAT几天前
 [goDate.go] (https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.go)
 
 D:\Works\>goDate.exe +10
@@ -103,5 +103,22 @@ D:\Works\>pause
 请按任意键继续. . .
 >>>
 
+
+```
+# 【方法2】Vbs 设置BAT几天前
+pushd F:\BAKVM\
+set n=14
+
+>"%tmp%\t.vbs" echo;t=date()-%n%:y=right(year(t),4):m=right("0"^&month(t),2):d=right("0"^&day(t),2):wscript.echo y^&" "^&m^&" "^&d
+
+for /f "tokens=1-3" %%a in ('cscript /nologo "%tmp%\t.vbs"') do set y=%%a&set m=%%b&set d=%%c
+
+echo;%n%Date:%y%%m%%d%
+echo;"F:\BAKVM\BAK%y%%m%%d%"
+if exist "F:\BAKVM\BAK%y%%m%%d%" (
+    rmdir /S /Q F:\BAKVM\BAK%y%%m%%d%
+)
+::几天前--
+```
 
 [回到顶部](#readme)
