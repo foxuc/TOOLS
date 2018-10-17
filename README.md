@@ -121,4 +121,24 @@ if exist "F:\BAKVM\BAK%y%%m%%d%" (
 ::几天前--
 ```
 
+# 【方法3】powershell 删除7天前的日志
+把以下命令保存为ps1脚本或加到计划任务中：
+#delete logs in specify website, just save logs in eight days~   
+$TimeOutDays=7
+$filePath="C:\temp\"    
+$allFiles=get-childitem -path $filePath
+ 
+foreach ($files in $allFiles)    
+{      
+   $daypan=((get-date)-$files.lastwritetime).days      
+   if ($daypan -gt $TimeOutDays)      
+   { 
+     #$files.FullName
+     remove-item $files.fullname -Recurse -force      
+    }    
+}
+参数说明:
+-Recurse  表示递归，删除子文件和子文件夹
+-Force 表示强制删除，不询问
+
 [回到顶部](#readme)
