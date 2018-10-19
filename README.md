@@ -25,7 +25,7 @@ C:\go>barcode_2wei.exe http://www.baidu.com
 <pre><code>Refresh_web.exe</code></pre>
 
 iniPath: D:\Works\FishStoreLog\src\config.ini
-
+```
           -------------- config.ini by xiaohai 2018.10.11 Ver:0.3 --------------
           
 url:  http://www.baidu.com
@@ -39,7 +39,7 @@ isPrint:  true
 isPrintwebBody:  false
 
            -------------- config.ini --------------
-           
+ ```          
 
 
 2018-10-11 15:20:51.494423 [   Get.Url开始运行中...  ]: http://www.baidu.com
@@ -56,7 +56,7 @@ ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 
 # 【方法1】goDate.exe 设置BAT几天前
 [goDate.go] (https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.go)
-
+```
 D:\Works\>goDate.exe +10
 
 20181027
@@ -84,7 +84,7 @@ Parameter Error !
 D:\Works\>goDate.exe +0
 
 Parameter Error !
-
+```
 
 # Run goDate.exe To BAT
 ```
@@ -161,6 +161,7 @@ foreach ($files in $allFiles)
 ```
 参数说明:
 -Recurse  表示递归，删除子文件和子文件夹
+
 -Force 表示强制删除，不询问
 
 [回到顶部](#readme)
