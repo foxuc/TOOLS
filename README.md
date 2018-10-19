@@ -1,6 +1,6 @@
 # barcode_2wei
 [barcode_2wei.exe](https://github.com/foxuc/TOOLS/blob/master/studygolang/barcode_2wei/barcode_2wei.exe)
-
+```
 C:\go>barcode_2wei.exe http://www.baidu.com
 
 2018/10/19 10:47:08 ===  20181018 ver:0.1 by hi==
@@ -10,7 +10,7 @@ C:\go>barcode_2wei.exe http://www.baidu.com
 2018/10/19 10:47:08 Encoded data:  http://www.baidu.com
 
 2018/10/19 10:47:08 Out_barcode_2018_10_19_10_47_07.png
-
+```
 请按任意键继续. . .
 输出百度www二维码：
 
