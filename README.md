@@ -55,7 +55,8 @@ ForNum: 9  sleepMillisecond: 500ms  Use: 4.3262474s
 请按任意键继续...
        
 # 【方法1】goDate.exe 设置BAT几天前
-[goDate.go] (https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.go)
+[goDate.exe](https://github.com/foxuc/TOOLS/blob/master/studygolang/goDate/goDate.exe)
+
 ```
 D:\Works\>goDate.exe +10
 
