@@ -1,3 +1,18 @@
+# barcode_2wei
+
+C:\go>barcode_2wei.exe http://www.baidu.com
+
+2018/10/19 10:47:08 ===  20181018 ver:0.1 by hi==
+
+2018/10/19 10:47:08 Original data: http://www.baidu.com
+
+2018/10/19 10:47:08 Encoded data:  http://www.baidu.com
+
+2018/10/19 10:47:08 Out_barcode_2018_10_19_10_47_07.png
+
+请按任意键继续. . .
+
+
 # TOOLS
 # TOOLS/studygolang/Refresh_web/Refresh_web.go
 
