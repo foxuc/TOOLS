@@ -1,4 +1,5 @@
 # barcode_2wei
+[barcode_2wei.exe](https://github.com/foxuc/TOOLS/blob/master/studygolang/barcode_2wei/barcode_2wei.exe)
 
 C:\go>barcode_2wei.exe http://www.baidu.com
 
