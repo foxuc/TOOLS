@@ -127,18 +127,22 @@ D:\Works\>pause
 
 # 【方法2】Vbs 设置BAT几天前
 ```
-pushd F:\BAKVM\
-set n=14
+set rootPath=D:\Works
+pushd %rootPat%
+set n=7
 
 >"%tmp%\t.vbs" echo;t=date()-%n%:y=right(year(t),4):m=right("0"^&month(t),2):d=right("0"^&day(t),2):wscript.echo y^&" "^&m^&" "^&d
 
 for /f "tokens=1-3" %%a in ('cscript /nologo "%tmp%\t.vbs"') do set y=%%a&set m=%%b&set d=%%c
 
 echo;%n%Date:%y%%m%%d%
-echo;"F:\BAKVM\BAK%y%%m%%d%"
-if exist "F:\BAKVM\BAK%y%%m%%d%" (
-    rmdir /S /Q F:\BAKVM\BAK%y%%m%%d%
+echo;" %rootPat%\BAK%y%%m%%d%"
+if exist " %rootPat%\BAK%y%%m%%d%" (
+    rmdir /S /Q  %rootPat%\BAK%y%%m%%d%
 )
+popd
+
+pause
 ::几天前--
 ```
 
