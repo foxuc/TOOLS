@@ -95,19 +95,16 @@ set runexe=goDate.exe -14
 
 ::skip=1 读取第二行的内容
 
-for /f "delims=" %%a in (1.txt) do (
-set txt=%%~a
-)
+for /f "delims=" %%a in (1.txt) do (set txt=%%~a)
 
 echo on
 echo %runexe% "day:" %txt%
 
-if exist ".\BAK%txt%" (
-    rmdir /S /Q .\BAK%txt%
-)
+if exist ".\BAK%txt%" (rmdir /S /Q .\BAK%txt%)
 mkdir .\BAK%txt%
-pause
 ```
+@pause
+
 >>>
 D:\Works\>echo off
 
